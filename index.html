@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристические поездки | Горизонт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo-link" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Горизонт</h1>
+                        <p>Туристические поездки</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a href="#">Направления</a>
+                    <a href="#">Туры</a>
+                    <a href="#">Блог</a>
+                    <a href="#">Контакты</a>
+                    <a href="#" class="btn">Войти</a>
+                </nav>
+            </a>
+        </header>
+
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-highlight">
+                    <i class="fas fa-plane"></i> Лето 2026
+                </div>
+                <h2>Путешествуй<br>с комфортом</h2>
+                <p class="hero-description">
+                    Индивидуальные и групповые туры по самым красивым уголкам мира. 
+                    Горы, море, экзотика — выбирай своё приключение.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">120+</span>
+                        <span class="stat-label">направлений</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15k</span>
+                        <span class="stat-label">туристов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">рейтинг</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Фон в CSS -->
+            </div>
+        </section>
+
+        <!-- Поиск туров -->
+        <div class="search-section">
+            <div class="search-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Куда хотите поехать?">
+            </div>
+            <div class="search-item">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="text" placeholder="Дата поездки">
+            </div>
+            <div class="search-item">
+                <i class="fas fa-users"></i>
+                <select>
+                    <option>2 взрослых</option>
+                    <option>1 взрослый</option>
+                    <option>3+ взрослых</option>
+                </select>
+            </div>
+            <button class="search-btn"><i class="fas fa-search"></i> Найти</button>
+        </div>
+
+        <!-- Популярные направления -->
+        <h2 class="section-title">Популярные <span>направления</span></h2>
+        <div class="destinations-grid">
+            <!-- Карточка 1 -->
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg');">
+                    <span class="card-price">от 520 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Барселона</h3>
+                        <i class="fas fa-star"></i><span> 4.8</span>
+                    </div>
+                    <p class="card-desc">Испания, архитектура Гауди, пляжи и вечерние фиесты.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 7 ночей</span>
+                        <span><i class="fas fa-umbrella-beach"></i> пляжный</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка 2 -->
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://voyagejapan.com/files/core/19_image.jpg');">
+                    <span class="card-price">от 780 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Саппоро</h3>
+                        <i class="fas fa-star"></i><span> 4.9</span>
+                    </div>
+                    <p class="card-desc">Япония, снежные фестивали, термальные источники.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 10 ночей</span>
+                        <span><i class="fas fa-mountain"></i> горнолыжный</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка 3 -->
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://extraguide.ru/images/sp/682aaa51b91da1f8da936226f930571dd893d6ce.jpg');">
+                    <span class="card-price">от 450 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Каппадокия</h3>
+                        <i class="fas fa-star"></i><span> 5.0</span>
+                    </div>
+                    <p class="card-desc">Турция, полёты на воздушном шаре, скальные отели.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 5 ночей</span>
+                        <span><i class="fas fa-camera"></i> фототур</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка 4 -->
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://online-teacher.ru/image/french/paris-2.jpg');">
+                    <span class="card-price">от 620 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Париж</h3>
+                        <i class="fas fa-star"></i><span> 4.7</span>
+                    </div>
+                    <p class="card-desc">Франция, романтика, Лувр, круассаны и Сена.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 6 ночей</span>
+                        <span><i class="fas fa-wine-glass-alt"></i> гастро</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Специальное предложение -->
+        <div class="offer">
+            <div class="offer-content">
+                <h3>Раннее бронирование 2026</h3>
+                <p>Скидка до 30% на туры в Европу и Азию при оплате до 1 апреля.</p>
+            </div>
+            <button class="offer-btn">Все предложения <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <!-- Отзывы -->
+        <h2 class="section-title">Что говорят <span>путешественники</span></h2>
+        <div class="reviews">
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>«Всё организовано идеально. В Каппадокии нас встретили, трансфер, отель с видом на скалы — сказка!»</p>
+                <div class="reviewer">
+                    <img src="https://n1s1.hsmedia.ru/13/57/7f/13577f85414b144065f36039f7c7988f/1200x900_0xac120003_1637295521644929900.jpeg" alt="avatar">
+                    <div>
+                        <h4>Анна С.</h4>
+                        <span>Москва</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>«Брали тур в Барселону с детьми. Программа насыщенная, но осталось время на пляж. Гид Мария — чудо!»</p>
+                <div class="reviewer">
+                    <img src="https://uprostim.com/wp-content/uploads/2021/03/image039-60.jpg" alt="avatar">
+                    <div>
+                        <h4>Дмитрий К.</h4>
+                        <span>СПб</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <p>«Саппоро зимой — это магия! Организаторы подсказали лучшие катки и раменные. Спасибо за эмоции.»</p>
+                <div class="reviewer">
+                    <img src="https://img.freepik.com/free-photo/close-up-morning-portrait-young-woman-sitting-bed_273443-3076.jpg?semt=ais_hybrid&w=740&q=80" alt="avatar">
+                    <div>
+                        <h4>Елена В.</h4>
+                        <span>Новосибирск</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал (вне container чтобы на всю ширину был фон) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Горизонт</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Работа у нас</a></li>
+                        <li><a href="#">Документы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Направления</h4>
+                    <ul>
+                        <li><a href="#">Европа</a></li>
+                        <li><a href="#">Азия</a></li>
+                        <li><a href="#">Америка</a></li>
+                        <li><a href="#">Россия</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Связаться с нами</a></li>
+                        <li><a href="#">Возвраты</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> 8 (800) 555-35-35</li>
+                        <li><i class="fas fa-envelope"></i> hello@gorizont.ru</li>
+                        <li><i class="fab fa-telegram"></i> @gorizont_travel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Горизонт. Все права защищены. Туристические поездки.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
