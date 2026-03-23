@@ -1,11 +1,158 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Горизонт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo-link" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Горизонт</h1>
+                        <p>Туристические поездки</p>
+                    </div>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="destinations.html">Направления</a>
+                <a href="about.html">О нас</a>
+                <a href="services.html">Услуги</a>
+                <a href="contact.html">Контакты</a>
+                <a href="careers.html">Работа у нас</a>
+                <a href="documents.html">Документы</a>
+            </nav>
+        </header>
 
-{% block title %}Контакты{% endblock %}
+        <div class="page-title">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами любым удобным способом</p>
+        </div>
 
-{% block content %}
-    <h1>Контакты</h1>
-    <p>Email: info@example.com</p>
-    <p>Телефон: +7 (123) 456-78-90</p>
-    <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
-    <p>Мы всегда рады вашим вопросам!</p>
-{% endblock %}
+        <div class="contact-page">
+            <div class="contact-info">
+                <h3>Наши контакты</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Адрес</h4>
+                        <p>г. Кемерово, пр.ленина, д. 15</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Телефон</h4>
+                        <p>8 (800) 555-35-35</p>
+                        <p>+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>gorizont@gmail.com</p>
+                        <p>info@gorizont.ru</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Режим работы</h4>
+                        <p>Пн-Пт: 10:00 - 20:00</p>
+                        <p>Сб-Вс: 11:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Напишите нам</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" placeholder="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="ivan@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (999) 123-45-67">
+                    </div>
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea rows="5" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить сообщение</button>
+                </form>
+            </div>
+
+            <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=86.148416,55.358676&z=17&pt=86.148416,55.358676,pm2rdl&l=map"
+                width="100%" 
+                height="300" 
+                frameborder="0"
+                style="border:0; border-radius: 12px;" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Горизонт</h4>
+                        <ul>
+                            <li><a href="about.html">О нас</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="careers.html">Работа у нас</a></li>
+                            <li><a href="documents.html">Документы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Направления</h4>
+                        <ul>
+                            <li><a href="destinations.html">Европа</a></li>
+                            <li><a href="destinations.html">Азия</a></li>
+                            <li><a href="destinations.html">Америка</a></li>
+                            <li><a href="destinations.html">Африка</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="contact.html">Связаться с нами</a></li>
+                            <li><a href="#">Возвраты</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> 8 (800) 555-35-35</li>
+                            <li><i class="fas fa-envelope"></i> gorizont@gmail.com</li>
+                            <li><i class="fab fa-telegram"></i> @gorizont_travel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    © 2026 Горизонт. Все права защищены.
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
