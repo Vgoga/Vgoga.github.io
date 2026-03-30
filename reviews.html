@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Горизонт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo-link" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Горизонт</h1>
+                        <p>Туристические поездки</p>
+                    </div>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Контакты</a>
+            </nav>
+        </header>
+
+        <div class="page-title">
+            <h1>Отзывы наших путешественников</h1>
+            <p>Реальные впечатления и эмоции от отдыха</p>
+        </div>
+
+        <div class="reviews-page">
+            <div class="review-stats">
+                <div class="stat-card">
+                    <div class="number">4.6</div>
+                    <div class="label">Средний рейтинг</div>
+                    <div style="color: #fbbf24; margin-top: 5px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">328</div>
+                    <div class="label">Всего отзывов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">90%</div>
+                    <div class="label">Рекомендуют</div>
+                </div>
+            </div>
+
+            <div class="review-form-section">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <div class="rating-input">
+                        <label>Ваша оценка</label>
+                        <div class="stars" id="starRating">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="0">
+                    </div>
+                    <div class="review-form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" id="reviewName" placeholder="Иван Иванов">
+                    </div>
+                    <div class="review-form-group">
+                        <label>Какой тур вы посетили?</label>
+                        <input type="text" id="reviewTour" placeholder="Барселона, июль 2026">
+                    </div>
+                    <div class="review-form-group">
+                        <label>Ваш отзыв</label>
+                        <textarea id="reviewText" rows="4" placeholder="Расскажите о вашем путешествии..."></textarea>
+                    </div>
+                    <button type="submit" class="review-submit-btn">Оставить отзыв</button>
+                </form>
+            </div>
+
+            <div id="reviewsList">
+                <div class="review-card-page">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">АС</div>
+                            <div class="reviewer-name">
+                                <h4>Анна Смирнова</h4>
+                                <span>Москва</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-date">Опубликовано: 15 марта 2026</div>
+                    <p class="review-text">Невероятная поездка в Барселону! Всё было организовано на высшем уровне: трансфер, отель, экскурсии. Отдельное спасибо гиду Елене за увлекательные рассказы о городе и архитектуре Гауди. Обязательно вернёмся к вам ещё!</p>
+                    <span class="review-tour">Тур: Барселона</span>
+                </div>
+
+                <div class="review-card-page">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ДК</div>
+                            <div class="reviewer-name">
+                                <h4>Дмитрий Козлов</h4>
+                                <span>Санкт-Петербург</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-date">Опубликовано: 10 марта 2026</div>
+                    <p class="review-text">Брали тур в Саппоро. Зимняя Япония - это сказка! Организация на высоте, все трансферы вовремя, отель отличный. Обязательно поедем с вами ещё!</p>
+                    <span class="review-tour">Тур: Саппоро</span>
+                </div>
+
+                <div class="review-card-page">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ЕВ</div>
+                            <div class="reviewer-name">
+                                <h4>Елена Воробьёва</h4>
+                                <span>Новосибирск</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-date">Опубликовано: 5 марта 2026</div>
+                    <p class="review-text">Каппадокия превзошла все ожидания! Полёт на воздушном шаре - это незабываемо. Спасибо за организацию, всё было супер! Единственный минус - короткий тур, хотелось бы подольше.</p>
+                    <span class="review-tour">Тур: Каппадокия</span>
+                </div>
+
+                <div class="review-card-page">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">МИ</div>
+                            <div class="reviewer-name">
+                                <h4>Михаил Иванов</h4>
+                                <span>Екатеринбург</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-date">Опубликовано: 20 февраля 2026</div>
+                    <p class="review-text">Отдыхали в Париже с женой. Всё было организовано идеально: билеты, отель в центре, экскурсии. Отдельное спасибо за рекомендацию ресторанов!</p>
+                    <span class="review-tour">Тур: Париж</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Горизонт</h4>
+                        <ul>
+                            <li><a href="about.html">О нас</a></li>
+                            <li><a href="careers.html">Работа у нас</a></li>
+                            <li><a href="documents.html">Документы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Направления</h4>
+                        <ul>
+                            <li><a href="destinations.html">Европа</a></li>
+                            <li><a href="destinations.html">Азия</a></li>
+                            <li><a href="destinations.html">Америка</a></li>
+                            <li><a href="destinations.html">Африка</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Связаться с нами</a></li>
+                            <li><a href="reviews.html">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> 8 (800) 555-35-35</li>
+                            <li><i class="fas fa-envelope"></i> gorizont@gmail.com</li>
+                            <li><i class="fab fa-telegram"></i> @gorizont_travel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    © 2026 Горизонт. Все права защищены.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('#starRating i');
+        const ratingInput = document.getElementById('ratingValue');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                ratingInput.value = rating;
+                
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.className = 'fas fa-star';
+                    } else {
+                        s.className = 'far fa-star';
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseenter', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.className = 'fas fa-star';
+                    } else {
+                        s.className = 'far fa-star';
+                    }
+                });
+            });
+        });
+        
+        document.getElementById('starRating').addEventListener('mouseleave', () => {
+            const currentRating = parseInt(ratingInput.value);
+            stars.forEach((s, index) => {
+                if (index < currentRating) {
+                    s.className = 'fas fa-star';
+                } else {
+                    s.className = 'far fa-star';
+                }
+            });
+        });
+
+        document.getElementById('reviewForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('reviewName').value;
+            const tour = document.getElementById('reviewTour').value;
+            const text = document.getElementById('reviewText').value;
+            const rating = parseInt(ratingInput.value);
+            
+            if (!name || !text || rating === 0) {
+                alert('Пожалуйста, заполните все поля и поставьте оценку');
+                return;
+            }
+            
+            alert('Спасибо за отзыв! Он будет опубликован после модерации.');
+            document.getElementById('reviewForm').reset();
+            ratingInput.value = 0;
+            stars.forEach(s => s.className = 'far fa-star');
+        });
+    </script>
+</body>
+</html>
