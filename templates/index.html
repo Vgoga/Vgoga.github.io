@@ -1,0 +1,307 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристические поездки | Горизонт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="{{ url_for('home') }}" class="logo-link" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Горизонт</h1>
+                        <p>Туристические поездки</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a href="{{ url_for('destinations') }}">Направления</a>
+                    <a href="{{ url_for('contact') }}">Контакты</a>
+                </nav>
+            </a>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-highlight">
+                    <i class="fas fa-plane"></i> Лето 2026
+                </div>
+                <h2>Путешествуй<br>с комфортом</h2>
+                <p class="hero-description">
+                    Индивидуальные и групповые туры по самым красивым местам мира. 
+                    
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">120+</span>
+                        <span class="stat-label">направлений</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15 тыс +</span>
+                        <span class="stat-label">туристов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">рейтинг</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+            </div>
+        </section>
+
+        <div class="search-section">
+            <div class="search-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Куда хотите поехать?">
+            </div>
+            <div class="search-item">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" placeholder="Дата поездки">
+            </div>
+            <div class="search-item">
+                <i class="fas fa-users"></i>
+                <select>
+                    <option>2 взрослых</option>
+                    <option>1 взрослый</option>
+                    <option>3+ взрослых</option>
+                </select>
+            </div>
+            <button class="search-btn"><i class="fas fa-search"></i> Найти</button>
+        </div>
+
+        <h2 class="section-title">Популярные <span>направления</span></h2>
+        <div class="destinations-grid">
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg');">
+                    <span class="card-price">от 520 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Барселона</h3>
+                        <i class="fas fa-star"></i><span> 4.8</span>
+                    </div>
+                    <p class="card-desc">Испания, архитектура Гауди, пляжи и вечерние фиесты.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 7 ночей</span>
+                        <span><i class="fas fa-umbrella-beach"></i> пляжный</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://voyagejapan.com/files/core/19_image.jpg');">
+                    <span class="card-price">от 780 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Саппоро</h3>
+                        <i class="fas fa-star"></i><span> 4.9</span>
+                    </div>
+                    <p class="card-desc">Япония, снежные фестивали, термальные источники.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 10 ночей</span>
+                        <span><i class="fas fa-mountain"></i> горнолыжный</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://extraguide.ru/images/sp/682aaa51b91da1f8da936226f930571dd893d6ce.jpg');">
+                    <span class="card-price">от 450 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Каппадокия</h3>
+                        <i class="fas fa-star"></i><span> 5.0</span>
+                    </div>
+                    <p class="card-desc">Турция, полёты на воздушном шаре, скальные отели.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 5 ночей</span>
+                        <span><i class="fas fa-camera"></i> фототур</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://online-teacher.ru/image/french/paris-2.jpg');">
+                    <span class="card-price">от 620 €</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        <h3>Париж</h3>
+                        <i class="fas fa-star"></i><span> 4.7</span>
+                    </div>
+                    <p class="card-desc">Франция, Лувр, круассаны и Сена.</p>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> 6 ночей</span>
+                        <span><i class="fas fa-wine-glass-alt"></i> гастро</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer">
+            <div class="offer-content">
+                <h3>Раннее бронирование 2026</h3>
+                <p>Скидка до 30% на туры в Европу и Азию при оплате до 1 апреля.</p>
+            </div>
+            <button class="offer-btn">Все предложения <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <h2 class="section-title">Что говорят <span>путешественники</span></h2>
+        <div class="reviews">
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>«Всё организовано идеально. Отель с видом на скалы - красиво.»</p>
+                <div class="reviewer">
+                    <img src="https://n1s1.hsmedia.ru/13/57/7f/13577f85414b144065f36039f7c7988f/1200x900_0xac120003_1637295521644929900.jpeg" alt="avatar">
+                    <div>
+                        <h4>Анна С.</h4>
+                        <span>Москва</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <p>«Брали тур в Барселону с детьми. Программа насыщенная, но осталось время на пляж.»</p>
+                <div class="reviewer">
+                    <img src="https://uprostim.com/wp-content/uploads/2021/03/image039-60.jpg" alt="avatar">
+                    <div>
+                        <h4>Дмитрий К.</h4>
+                        <span>СПб</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <p>«Саппоро зимой - это магия! Организаторы подсказали лучшие катки и раменные. Спасибо за эмоции.»</p>
+                <div class="reviewer">
+                    <img src="https://img.freepik.com/free-photo/close-up-morning-portrait-young-woman-sitting-bed_273443-3076.jpg?semt=ais_hybrid&w=740&q=80" alt="avatar">
+                    <div>
+                        <h4>Елена В.</h4>
+                        <span>Новосибирск</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="{{ url_for('reviews') }}" class="offer-btn" style="display: inline-block; text-decoration: none;">Все отзывы →</a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Горизонт</h4>
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">О нас</a></li>
+                        <li><a href="{{ url_for('careers') }}">Работа у нас</a></li>
+                        <li><a href="{{ url_for('documents') }}">Документы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Направления</h4>
+                    <ul>
+                        <li><a href="{{ url_for('destinations') }}">Европа</a></li>
+                        <li><a href="{{ url_for('destinations') }}">Азия</a></li>
+                        <li><a href="{{ url_for('destinations') }}">Америка</a></li>
+                        <li><a href="{{ url_for('destinations') }}">Африка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('contact') }}">Связаться с нами</a></li>
+                        <li><a href="{{ url_for('reviews') }}">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> 8 (800) 555-35-35</li>
+                        <li><i class="fas fa-envelope"></i> gorizont@gmail.com</li>
+                        <li><i class="fab fa-telegram"></i> @gorizont_travel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Горизонт. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    <script>
+    async function loadHomeReviews() {
+        try {
+            const response = await fetch('/api/reviews');
+            const reviews = await response.json();
+
+            const latestReviews = reviews.slice(0, 3);
+            
+            const reviewsContainer = document.querySelector('.reviews');
+            if (!reviewsContainer) return;
+
+            reviewsContainer.innerHTML = '';
+
+            latestReviews.forEach(review => {
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= review.rating) {
+                        starsHtml += '<i class="fas fa-star"></i>';
+                    } else if (i - 0.5 <= review.rating) {
+                        starsHtml += '<i class="fas fa-star-half-alt"></i>';
+                    } else {
+                        starsHtml += '<i class="far fa-star"></i>';
+                    }
+                }
+
+                const initials = review.name.split(' ').map(n => n[0]).join('');
+                
+                const reviewHtml = `
+                    <div class="review-card">
+                        ${starsHtml}
+                        <p>«${escapeHtml(review.text.substring(0, 120))}${review.text.length > 120 ? '...' : ''}»</p>
+                        <div class="reviewer">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">${initials}</div>
+                            <div>
+                                <h4>${escapeHtml(review.name)}</h4>
+                                <span>${review.tour || 'Путешественник'}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                reviewsContainer.innerHTML += reviewHtml;
+            });
+            
+        } catch (error) {
+            console.error('Ошибка загрузки отзывов:', error);
+        }
+    }
+    
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadHomeReviews);
+    </script>
+
+
+</body>
+</html>
+{% endblock %}

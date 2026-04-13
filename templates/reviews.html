@@ -1,0 +1,281 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Горизонт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="{{ url_for('home') }}" class="logo-link" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Горизонт</h1>
+                        <p>Туристические поездки</p>
+                    </div>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="{{ url_for('home') }}">Главная</a>
+                <a href="{{ url_for('about') }}">О нас</a>
+                <a href="{{ url_for('reviews') }}">Отзывы</a>
+                <a href="{{ url_for('faq') }}">FAQ</a>
+                <a href="{{ url_for('contact') }}">Контакты</a>
+            </nav>
+        </header>
+
+        <div class="page-title">
+            <h1>Отзывы наших путешественников</h1>
+            <p>Реальные впечатления и эмоции от отдыха</p>
+        </div>
+
+        <div class="reviews-page">
+            <div class="review-stats" id="reviewStats">
+                <div class="stat-card">
+                    <div class="number" id="avgRating">0</div>
+                    <div class="label">Средний рейтинг</div>
+                    <div id="avgStars" style="color: #fbbf24; margin-top: 5px;"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="totalReviews">0</div>
+                    <div class="label">Всего отзывов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number" id="recommendPercent">0%</div>
+                    <div class="label">Рекомендуют</div>
+                </div>
+            </div>
+
+            <div class="review-form-section">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <div class="rating-input">
+                        <label>Ваша оценка</label>
+                        <div class="stars" id="starRating">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="0">
+                    </div>
+                    <div class="review-form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" id="reviewName" placeholder="Анна Смирнова" required>
+                    </div>
+                    <div class="review-form-group">
+                        <label>Какой тур вы посетили?</label>
+                        <input type="text" id="reviewTour" placeholder="Барселона, июль 2026">
+                    </div>
+                    <div class="review-form-group">
+                        <label>Ваш отзыв</label>
+                        <textarea id="reviewText" rows="4" placeholder="Расскажите о вашем путешествии..." required></textarea>
+                    </div>
+                    <button type="submit" class="review-submit-btn">Оставить отзыв</button>
+                </form>
+            </div>
+
+            <div id="reviewsList"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Горизонт</h4>
+                        <ul>
+                            <li><a href="{{ url_for('about') }}">О нас</a></li>
+                            <li><a href="{{ url_for('careers') }}">Работа у нас</a></li>
+                            <li><a href="{{ url_for('documents') }}">Документы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Направления</h4>
+                        <ul>
+                            <li><a href="{{ url_for('destinations') }}">Европа</a></li>
+                            <li><a href="{{ url_for('destinations') }}">Азия</a></li>
+                            <li><a href="{{ url_for('destinations') }}">Америка</a></li>
+                            <li><a href="{{ url_for('destinations') }}">Африка</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Поддержка</h4>
+                        <ul>
+                            <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                            <li><a href="{{ url_for('contact') }}">Связаться с нами</a></li>
+                            <li><a href="{{ url_for('reviews') }}">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> 8 (800) 555-35-35</li>
+                            <li><i class="fas fa-envelope"></i> gorizont@gmail.com</li>
+                            <li><i class="fab fa-telegram"></i> @gorizont_travel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    © 2026 Горизонт. Все права защищены.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function updateStars(rating) {
+            const stars = document.querySelectorAll('#starRating i');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.className = 'fas fa-star';
+                    star.style.color = '#fbbf24';
+                } else {
+                    star.className = 'far fa-star';
+                    star.style.color = '#cbd5e1';
+                }
+            });
+        }
+
+        const stars = document.querySelectorAll('#starRating i');
+        const ratingInput = document.getElementById('ratingValue');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                ratingInput.value = rating;
+                updateStars(rating);
+            });
+            
+            star.addEventListener('mouseenter', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.className = 'fas fa-star';
+                        s.style.color = '#fbbf24';
+                    } else {
+                        s.className = 'far fa-star';
+                        s.style.color = '#cbd5e1';
+                    }
+                });
+            });
+        });
+        
+        document.getElementById('starRating').addEventListener('mouseleave', () => {
+            const currentRating = parseInt(ratingInput.value);
+            updateStars(currentRating);
+        });
+
+        async function loadReviews() {
+            try {
+                const response = await fetch('/api/reviews');
+                const reviews = await response.json();
+                
+                const reviewsList = document.getElementById('reviewsList');
+                reviewsList.innerHTML = '';
+                
+                let totalRating = 0;
+                let recommendCount = 0;
+                
+                reviews.forEach(review => {
+                    totalRating += review.rating;
+                    if (review.rating >= 4) recommendCount++;
+                    
+                    const starsHtml = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+                    const initials = review.name.split(' ').map(n => n[0]).join('');
+                    
+                    const reviewHtml = `
+                        <div class="review-card-page">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">${initials}</div>
+                                    <div class="reviewer-name">
+                                        <h4>${escapeHtml(review.name)}</h4>
+                                        <span>Россия</span>
+                                    </div>
+                                </div>
+                                <div class="review-rating" style="color: #fbbf24;">
+                                    ${'<i class="fas fa-star"></i>'.repeat(review.rating)}${'<i class="far fa-star"></i>'.repeat(5 - review.rating)}
+                                </div>
+                            </div>
+                            <div class="review-date">Опубликовано: ${review.date}</div>
+                            <p class="review-text">${escapeHtml(review.text)}</p>
+                            ${review.tour ? `<span class="review-tour">Тур: ${escapeHtml(review.tour)}</span>` : ''}
+                        </div>
+                    `;
+                    reviewsList.innerHTML += reviewHtml;
+                });
+                
+                const total = reviews.length;
+                const avg = total > 0 ? (totalRating / total).toFixed(1) : 0;
+                const recommend = total > 0 ? Math.round((recommendCount / total) * 100) : 0;
+                
+                document.getElementById('avgRating').innerHTML = avg;
+                document.getElementById('totalReviews').innerHTML = total;
+                document.getElementById('recommendPercent').innerHTML = recommend + '%';
+                
+                const avgStarsHtml = '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
+                document.getElementById('avgStars').innerHTML = avgStarsHtml;
+                
+            } catch (error) {
+                console.error('Ошибка загрузки отзывов:', error);
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.getElementById('reviewForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('reviewName').value.trim();
+            const tour = document.getElementById('reviewTour').value.trim();
+            const text = document.getElementById('reviewText').value.trim();
+            const rating = parseInt(ratingInput.value);
+            
+            if (!name || !text || rating === 0) {
+                alert('Пожалуйста, заполните все поля и поставьте оценку');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/reviews', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, tour, rating, text })
+                });
+                
+                if (response.ok) {
+                    alert('Спасибо за отзыв! Он появится после обновления страницы.');
+                    document.getElementById('reviewForm').reset();
+                    ratingInput.value = 0;
+                    updateStars(0);
+                    loadReviews();
+                } else {
+                    alert('Ошибка при отправке отзыва');
+                }
+            } catch (error) {
+                alert('Ошибка соединения с сервером');
+            }
+        });
+
+        loadReviews();
+    </script>
+</body>
+</html>
+{% endblock %}
