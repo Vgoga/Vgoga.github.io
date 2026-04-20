@@ -85,7 +85,7 @@
         <h2 class="section-title">Популярные <span>направления</span></h2>
 
         <div class="destinations-grid">
-            <a href="{{ url_for('destinations') }}?tour=barcelona" class="card-link" style="text-decoration: none; color: inherit;">
+            <a href="{{ url_for('tour_detail', tour_name='barcelona') }}" class="card-link">
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg');">
                         <span class="card-price">от 520 €</span>

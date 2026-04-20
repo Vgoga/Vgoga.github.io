@@ -57,7 +57,9 @@
                             <span><i class="fas fa-umbrella-beach"></i> пляжный</span>
                             <span><i class="fas fa-city"></i> экскурсионный</span>
                         </div>
-                        <button class="destination-btn">Выбрать тур</button>
+                        <a href="{{ url_for('tour_detail', tour_name='barcelona') }}" style="text-decoration: none;">
+                            <button class="destination-btn">Выбрать тур</button>
+                        </a>
                     </div>
                 </div>
 
@@ -206,7 +208,6 @@
         const tour = urlParams.get('tour');
         
         if (tour) {
-            // Прокручиваем к карточке и подсвечиваем её
             setTimeout(() => {
                 const cards = document.querySelectorAll('.destination-card');
                 let targetCard = null;
