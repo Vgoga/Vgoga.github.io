@@ -1280,3 +1280,151 @@ body {
 .stat-card .label {
     color: #64748b;
 }
+
+.card-link {
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+    border-radius: 16px;
+}
+
+.card-link:hover {
+    transform: translateY(-5px);
+}
+
+.card-link:active {
+    transform: translateY(0);
+}
+
+.tour-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.back-link {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.tour-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.tour-detail-image {
+    width: 100%;
+    border-radius: 16px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.tour-detail-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.tour-detail-country {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.tour-detail-rating {
+    color: #fbbf24;
+    margin-bottom: 20px;
+}
+
+.tour-detail-rating span {
+    color: #333;
+}
+
+.tour-detail-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #334155;
+}
+
+.tour-detail-features {
+    margin-bottom: 30px;
+}
+
+.tour-detail-features h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.tour-detail-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tour-detail-features li {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+.tour-detail-features i {
+    color: #3b82f6;
+    margin-right: 8px;
+    width: 20px;
+}
+
+.tour-detail-price-box {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.tour-detail-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.tour-detail-price-label {
+    color: #64748b;
+}
+
+.tour-detail-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.tour-detail-btn:hover {
+    background: #2563eb;
+}
+
+@media (max-width: 768px) {
+    .tour-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .tour-detail-title {
+        font-size: 28px;
+    }
+    
+    .tour-detail-image {
+        height: 250px;
+    }
+}

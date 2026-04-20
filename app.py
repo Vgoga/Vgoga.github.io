@@ -178,5 +178,56 @@ def careers():
 def documents():
     return render_template('documents.html')
 
+@app.route('/tour/<string:tour_name>')
+def tour_detail(tour_name):
+    tours_data = {
+        'barcelona': {
+            'name': 'Барселона',
+            'country': 'Испания',
+            'price': '520 €',
+            'nights': 7,
+            'rating': 4.8,
+            'description': 'Барселона — столица Каталонии, город удивительной архитектуры Антонио Гауди, солнечных пляжей и вкуснейшей кухни.',
+            'image': 'https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg',
+            'features': ['Экскурсии', 'Пляжный отдых', 'Гастрономические туры']
+        },
+        'sapporo': {
+            'name': 'Саппоро',
+            'country': 'Япония',
+            'price': '780 €',
+            'nights': 10,
+            'rating': 4.9,
+            'description': 'Саппоро — столица Хоккайдо, знаменитая снежными фестивалями, термальными источниками и отличными горнолыжными курортами.',
+            'image': 'https://voyagejapan.com/files/core/19_image.jpg',
+            'features': ['Горнолыжный спорт', 'Онсены', 'Снежный фестиваль']
+        },
+        'cappadocia': {
+            'name': 'Каппадокия',
+            'country': 'Турция',
+            'price': '450 €',
+            'nights': 5,
+            'rating': 5.0,
+            'description': 'Каппадокия — уникальный регион с лунными пейзажами, пещерными городами и незабываемыми полётами на воздушных шарах.',
+            'image': 'https://extraguide.ru/images/sp/682aaa51b91da1f8da936226f930571dd893d6ce.jpg',
+            'features': ['Воздушные шары', 'Пещерные отели', 'Фототуры']
+        },
+        'paris': {
+            'name': 'Париж',
+            'country': 'Франция',
+            'price': '620 €',
+            'nights': 6,
+            'rating': 4.7,
+            'description': 'Париж — город любви, искусства и моды. Эйфелева башня, Лувр, уютные кафе и бутики.',
+            'image': 'https://online-teacher.ru/image/french/paris-2.jpg',
+            'features': ['Экскурсии', 'Шопинг', 'Гастрономия']
+        }
+    }
+    
+    tour = tours_data.get(tour_name)
+    if not tour:
+        return redirect(url_for('destinations'))
+    
+    return render_template('tour_detail.html', tour=tour, tour_name=tour_name)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

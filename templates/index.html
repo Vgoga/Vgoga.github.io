@@ -83,80 +83,92 @@
         </div>
 
         <h2 class="section-title">Популярные <span>направления</span></h2>
+
         <div class="destinations-grid">
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg');">
-                    <span class="card-price">от 520 €</span>
-                </div>
-                <div class="card-content">
-                    <div class="card-title">
-                        <h3>Барселона</h3>
-                        <i class="fas fa-star"></i><span> 4.8</span>
+            <a href="{{ url_for('destinations') }}?tour=barcelona" class="card-link" style="text-decoration: none; color: inherit;">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg');">
+                        <span class="card-price">от 520 €</span>
                     </div>
-                    <p class="card-desc">Испания, архитектура Гауди, пляжи и вечерние фиесты.</p>
-                    <div class="card-details">
-                        <span><i class="fas fa-clock"></i> 7 ночей</span>
-                        <span><i class="fas fa-umbrella-beach"></i> пляжный</span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Барселона</h3>
+                            <i class="fas fa-star"></i><span> 4.8</span>
+                        </div>
+                        <p class="card-desc">Испания, архитектура Гауди, пляжи и вечерние фиесты.</p>
+                        <div class="card-details">
+                            <span><i class="fas fa-clock"></i> 7 ночей</span>
+                            <span><i class="fas fa-umbrella-beach"></i> пляжный</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://voyagejapan.com/files/core/19_image.jpg');">
-                    <span class="card-price">от 780 €</span>
-                </div>
-                <div class="card-content">
-                    <div class="card-title">
-                        <h3>Саппоро</h3>
-                        <i class="fas fa-star"></i><span> 4.9</span>
+            <!-- Карточка Саппоро -->
+            <a href="{{ url_for('destinations') }}?tour=sapporo" class="card-link" style="text-decoration: none; color: inherit;">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://voyagejapan.com/files/core/19_image.jpg');">
+                        <span class="card-price">от 780 €</span>
                     </div>
-                    <p class="card-desc">Япония, снежные фестивали, термальные источники.</p>
-                    <div class="card-details">
-                        <span><i class="fas fa-clock"></i> 10 ночей</span>
-                        <span><i class="fas fa-mountain"></i> горнолыжный</span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Саппоро</h3>
+                            <i class="fas fa-star"></i><span> 4.9</span>
+                        </div>
+                        <p class="card-desc">Япония, снежные фестивали, термальные источники.</p>
+                        <div class="card-details">
+                            <span><i class="fas fa-clock"></i> 10 ночей</span>
+                            <span><i class="fas fa-mountain"></i> горнолыжный</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://extraguide.ru/images/sp/682aaa51b91da1f8da936226f930571dd893d6ce.jpg');">
-                    <span class="card-price">от 450 €</span>
-                </div>
-                <div class="card-content">
-                    <div class="card-title">
-                        <h3>Каппадокия</h3>
-                        <i class="fas fa-star"></i><span> 5.0</span>
+            <!-- Карточка Каппадокия -->
+            <a href="{{ url_for('destinations') }}?tour=cappadocia" class="card-link" style="text-decoration: none; color: inherit;">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://extraguide.ru/images/sp/682aaa51b91da1f8da936226f930571dd893d6ce.jpg');">
+                        <span class="card-price">от 450 €</span>
                     </div>
-                    <p class="card-desc">Турция, полёты на воздушном шаре, скальные отели.</p>
-                    <div class="card-details">
-                        <span><i class="fas fa-clock"></i> 5 ночей</span>
-                        <span><i class="fas fa-camera"></i> фототур</span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Каппадокия</h3>
+                            <i class="fas fa-star"></i><span> 5.0</span>
+                        </div>
+                        <p class="card-desc">Турция, полёты на воздушном шаре, скальные отели.</p>
+                        <div class="card-details">
+                            <span><i class="fas fa-clock"></i> 5 ночей</span>
+                            <span><i class="fas fa-camera"></i> фототур</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://online-teacher.ru/image/french/paris-2.jpg');">
-                    <span class="card-price">от 620 €</span>
-                </div>
-                <div class="card-content">
-                    <div class="card-title">
-                        <h3>Париж</h3>
-                        <i class="fas fa-star"></i><span> 4.7</span>
+            <!-- Карточка Париж -->
+            <a href="{{ url_for('destinations') }}?tour=paris" class="card-link" style="text-decoration: none; color: inherit;">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://online-teacher.ru/image/french/paris-2.jpg');">
+                        <span class="card-price">от 620 €</span>
                     </div>
-                    <p class="card-desc">Франция, Лувр, круассаны и Сена.</p>
-                    <div class="card-details">
-                        <span><i class="fas fa-clock"></i> 6 ночей</span>
-                        <span><i class="fas fa-wine-glass-alt"></i> гастро</span>
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h3>Париж</h3>
+                            <i class="fas fa-star"></i><span> 4.7</span>
+                        </div>
+                        <p class="card-desc">Франция, Лувр, круассаны и Сена.</p>
+                        <div class="card-details">
+                            <span><i class="fas fa-clock"></i> 6 ночей</span>
+                            <span><i class="fas fa-wine-glass-alt"></i> гастро</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="offer">
             <div class="offer-content">
                 <h3>Раннее бронирование 2026</h3>
-                <p>Скидка до 30% на туры в Европу и Азию при оплате до 1 апреля.</p>
+                <p>Скидка до 30% на туры в Европу и Азию при оплате до 1 Мая.</p>
             </div>
             <button class="offer-btn">Все предложения <i class="fas fa-arrow-right"></i></button>
         </div>

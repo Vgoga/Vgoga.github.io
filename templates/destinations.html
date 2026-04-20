@@ -201,6 +201,42 @@
             </div>
         </footer>
     </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const tour = urlParams.get('tour');
+        
+        if (tour) {
+            // Прокручиваем к карточке и подсвечиваем её
+            setTimeout(() => {
+                const cards = document.querySelectorAll('.destination-card');
+                let targetCard = null;
+                
+                switch(tour) {
+                    case 'barcelona':
+                        targetCard = cards[0];
+                        break;
+                    case 'sapporo':
+                        targetCard = cards[1];
+                        break;
+                    case 'cappadocia':
+                        targetCard = cards[2];
+                        break;
+                    case 'paris':
+                        targetCard = cards[3];
+                        break;
+                }
+                
+                if (targetCard) {
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetCard.style.transition = 'all 0.3s';
+                    targetCard.style.boxShadow = '0 0 0 3px #3b82f6, 0 10px 25px -5px rgba(0,0,0,0.1)';
+                    setTimeout(() => {
+                        targetCard.style.boxShadow = '';
+                    }, 2000);
+                }
+            }, 100);
+        }
+    </script>
 </body>
 </html>
 {% endblock %}

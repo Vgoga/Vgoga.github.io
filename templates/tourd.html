@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tour.name }} - Горизонт{% endblock %}
+
+{% block content %}
+<div class="tour-detail">
+    <a href="{{ url_for('destinations') }}" class="back-link">← Назад к направлениям</a>
+    
+    <div class="tour-detail-grid">
+        <div>
+            <img src="{{ tour.image }}" alt="{{ tour.name }}" class="tour-detail-image">
+        </div>
+        <div>
+            <h1 class="tour-detail-title">{{ tour.name }}</h1>
+            <p class="tour-detail-country">{{ tour.country }}</p>
+            <div class="tour-detail-rating">
+                {% for i in range(5) %}
+                    {% if i < tour.rating|round(0, 'floor') %}
+                        <i class="fas fa-star"></i>
+                    {% else %}
+                        <i class="far fa-star"></i>
+                    {% endif %}
+                {% endfor %}
+                <span> {{ tour.rating }}</span>
+            </div>
+            <p class="tour-detail-description">{{ tour.description }}</p>
+            
+            <div class="tour-detail-features">
+                <h3>Что включено:</h3>
+                <ul>
+                    {% for feature in tour.features %}
+                        <li><i class="fas fa-check"></i> {{ feature }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="tour-detail-price-box">
+                <span class="tour-detail-price">{{ tour.price }}</span>
+                <span class="tour-detail-price-label"> за {{ tour.nights }} ночей</span>
+                <button class="tour-detail-btn">Забронировать</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
