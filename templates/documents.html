@@ -62,42 +62,52 @@
             
             <div class="doc-item">
                 <div class="doc-info">
-                    <h4>Памятка туриста</h4>
+                    <h4>📄 Памятка туриста</h4>
                     <p>Важная информация перед поездкой</p>
                 </div>
-                <a href="#" class="doc-download">Скачать</a>
+                <a href="{{ url_for('static', filename='docs/tourist_guide.pdf') }}" class="doc-download" download>
+                    <i class="fas fa-download"></i> Скачать
+                </a>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
-                    <h4>Договор о реализации тура</h4>
+                    <h4>📄 Договор о реализации тура</h4>
                     <p>Типовая форма договора</p>
                 </div>
-                <a href="#" class="doc-download">Скачать</a>
+                <a href="{{ url_for('static', filename='docs/contract.pdf') }}" class="doc-download" download>
+                    <i class="fas fa-download"></i> Скачать
+                </a>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
-                    <h4>Политика конфиденциальности</h4>
+                    <h4>📄 Политика конфиденциальности</h4>
                     <p>Обработка персональных данных</p>
                 </div>
-                <a href="#" class="doc-download">Скачать</a>
+                <a href="{{ url_for('static', filename='docs/privacy.pdf') }}" class="doc-download" download>
+                    <i class="fas fa-download"></i> Скачать
+                </a>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
-                    <h4>Презентация компании</h4>
+                    <h4>📄 Презентация компании</h4>
                     <p>Для партнёров и клиентов</p>
                 </div>
-                <a href="#" class="doc-download">Скачать</a>
+                <a href="{{ url_for('static', filename='docs/presentation.pdf') }}" class="doc-download" download>
+                    <i class="fas fa-download"></i> Скачать
+                </a>
             </div>
 
             <div class="doc-item">
                 <div class="doc-info">
-                    <h4>Публичная оферта</h4>
+                    <h4>📄 Публичная оферта</h4>
                     <p>Условия предоставления услуг</p>
                 </div>
-                <a href="#" class="doc-download">Скачать</a>
+                <a href="{{ url_for('static', filename='docs/public_offer.pdf') }}" class="doc-download" download>
+                    <i class="fas fa-download"></i> Скачать
+                </a>
             </div>
         </div>
 
