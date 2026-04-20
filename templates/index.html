@@ -85,7 +85,7 @@
         <h2 class="section-title">Популярные <span>направления</span></h2>
 
         <div class="destinations-grid">
-            <a href="{{ url_for('tour_detail', tour_name='barcelona') }}" class="card-link">
+            <a href="{{ url_for('tour_detail', tour_name='barcelona') }}" class="card-link" style="text-decoration: none; color: inherit;">
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://fs.tonkosti.ru/sized/c800x800/7f/3l/7f3lcgdq00sg40cwo0k8cscco.jpg');">
                         <span class="card-price">от 520 €</span>
@@ -104,8 +104,7 @@
                 </div>
             </a>
 
-            <!-- Карточка Саппоро -->
-            <a href="{{ url_for('destinations') }}?tour=sapporo" class="card-link" style="text-decoration: none; color: inherit;">
+            <a href="{{ url_for('tour_detail', tour_name='sapporo') }}" class="card-link" style="text-decoration: none; color: inherit;">
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://voyagejapan.com/files/core/19_image.jpg');">
                         <span class="card-price">от 780 €</span>
@@ -124,8 +123,7 @@
                 </div>
             </a>
 
-            <!-- Карточка Каппадокия -->
-            <a href="{{ url_for('destinations') }}?tour=cappadocia" class="card-link" style="text-decoration: none; color: inherit;">
+            <a href="{{ url_for('tour_detail', tour_name='cappadocia') }}" class="card-link" style="text-decoration: none; color: inherit;">
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://extraguide.ru/images/sp/682aaa51b91da1f8da936226f930571dd893d6ce.jpg');">
                         <span class="card-price">от 450 €</span>
@@ -144,8 +142,7 @@
                 </div>
             </a>
 
-            <!-- Карточка Париж -->
-            <a href="{{ url_for('destinations') }}?tour=paris" class="card-link" style="text-decoration: none; color: inherit;">
+           <a href="{{ url_for('tour_detail', tour_name='paris') }}" class="card-link" style="text-decoration: none; color: inherit;">
                 <div class="card">
                     <div class="card-image" style="background-image: url('https://online-teacher.ru/image/french/paris-2.jpg');">
                         <span class="card-price">от 620 €</span>
