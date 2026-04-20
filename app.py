@@ -220,12 +220,32 @@ def tour_detail(tour_name):
             'description': 'Париж — город любви, искусства и моды. Эйфелева башня, Лувр, уютные кафе и бутики.',
             'image': 'https://online-teacher.ru/image/french/paris-2.jpg',
             'features': ['Экскурсии', 'Шопинг', 'Гастрономия']
+        },
+        'venice': {
+            'name': 'Венеция',
+            'country': 'Италия',
+            'price': '890 €',
+            'nights': 5,
+            'rating': 4.9,
+            'description': 'Венеция — город на воде с гондолами, каналами, карнавалами и уникальной архитектурой. Романтическое путешествие мечты.',
+            'image': 'https://www.italia.it/content/dam/italia/images/2023/10/venezia-canal-grande-1920x1280.jpg',
+            'features': ['Прогулка на гондоле', 'Площадь Сан-Марко', 'Итальянская кухня', 'Карнавал']
+        },
+        'bali': {
+            'name': 'Бали',
+            'country': 'Индонезия',
+            'price': '1100 €',
+            'nights': 11,
+            'rating': 4.8,
+            'description': 'Райский остров с белоснежными пляжами, храмами, рисовыми террасами и уникальной культурой. Идеальное место для релакса и приключений.',
+            'image': 'https://a.cdn-hotels.com/gdcs/production124/d123/ee80c2d1-8b1e-4891-86c8-c3962d8630f7.jpg',
+            'features': ['Пляжный отдых', 'Сёрфинг', 'Храмы', 'Спа-процедуры', 'Йога']
         }
     }
     
     tour = tours_data.get(tour_name)
     if not tour:
-        return redirect(url_for('destinations'))
+        return "Тур не найден", 404
     
     return render_template('tour_detail.html', tour=tour, tour_name=tour_name)
 
