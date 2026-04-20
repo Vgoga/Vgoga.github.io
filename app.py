@@ -228,7 +228,7 @@ def tour_detail(tour_name):
             'nights': 5,
             'rating': 4.9,
             'description': 'Венеция — город на воде с гондолами, каналами, карнавалами и уникальной архитектурой. Романтическое путешествие мечты.',
-            'image': 'https://www.italia.it/content/dam/italia/images/2023/10/venezia-canal-grande-1920x1280.jpg',
+            'image': 'https://resize.tripster.ru/PVxSoHbqUU53KHUT_aFUFXjG4QA=/fit-in/1220x600/filters:no_upscale()/https://cdn.tripster.ru/photos/b4b24d7b-8a04-4018-bb40-270b4e80abc4.jpg',
             'features': ['Прогулка на гондоле', 'Площадь Сан-Марко', 'Итальянская кухня', 'Карнавал']
         },
         'bali': {
@@ -238,7 +238,7 @@ def tour_detail(tour_name):
             'nights': 11,
             'rating': 4.8,
             'description': 'Райский остров с белоснежными пляжами, храмами, рисовыми террасами и уникальной культурой. Идеальное место для релакса и приключений.',
-            'image': 'https://a.cdn-hotels.com/gdcs/production124/d123/ee80c2d1-8b1e-4891-86c8-c3962d8630f7.jpg',
+            'image': 'https://img.pac.ru/resorts/213172/248694/big/B39C17E8C0A8801470BD51480C17F6C3.jpg',
             'features': ['Пляжный отдых', 'Сёрфинг', 'Храмы', 'Спа-процедуры', 'Йога']
         }
     }
